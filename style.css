@@ -1,0 +1,210 @@
+/* Animation première : 3 livres en 3D */
+/* 
+body {
+    margin: 0;
+    padding: 0; 
+    background: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    position: absolute; 
+    left: 40%;
+    top: 25%;
+}
+
+ul li {
+    display: block;
+    width: 340px;
+    height: 380px;
+    background: rgb(255, 0, 0);
+    position: absolute;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    transition: 0.5s;
+}
+
+ul li span {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 32px;
+    line-height: 280px;
+}
+
+ul li:nth-child(3) {
+    transform: rotate(10deg) skew(-30deg) translate(-15px, -15px);
+}
+ul li:nth-child(2) {
+    transform: rotate(10deg) skew(-30deg) translate(0px, 0px);
+}
+ul li:nth-child(1) {
+    transform: rotate(10deg) skew(-30deg) translate(15px, 15px);
+}
+
+ul:hover li:nth-child(3)  {
+    transform: rotate(-5deg) skew(0deg) translate(-300px, 0);
+}
+ul:hover li:nth-child(2) {
+    transform: rotate(0deg) skew(0deg) translate(0px, 0);
+}
+ul:hover li:nth-child(1) {
+    transform: rotate(5deg) skew(0deg) translate(300px, 0);
+} */
+
+/* Animation 2ème : Le bouton de like qui fait 90 degrès  */
+
+/* 
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.bouton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    display: inline-flex;
+    transform-style: preserve-3d;
+    perspective: 200px;
+    perspective-origin: calc(100% - 53px);
+}
+
+.text {
+    background: #000080;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    letter-spacing: 3px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    line-height: 42px;
+    box-sizing: border-box;
+    border: 4px solid #000080;
+    border-left: none;
+    transition: 400ms transform ease-in-out;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+img {
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bouton:hover .icon {
+    transform: rotateY(0deg);
+} */
+
+
+/* Animation 3 : 4 cartes agences */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+}
+.title {
+    width: 50%;
+    height: 100vh;
+    background: #000;
+    position: relative;
+}
+.presentation {
+    position: absolute;
+    color: #f1f1f1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+.presentation p {
+    margin-top: 20px;
+}
+h1 {
+    font-size: 80px;
+    display: block;
+    width: 100%;
+}
+.bouton {
+    background-color: rgb(76,99,175);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.boxCartes{
+    display: block;
+    position: relative;
+    width: 30%;
+    height: 100vh;
+    width: 0px;
+}
+.cards, .stack {
+    transform-style: preserve-3d;
+}
+.cards {
+    display: grid;
+    grid-template: repeat(2, 200px) / repeat(2, 300px);
+    grid-gap: 27px;
+    position: absolute;
+    top: 27%;
+    left: 40%;
+    transform:rotateX(45deg) rotateZ(45deg);
+    transition: 1s ease;
+}
+.boxCartes:hover .cards {
+    transform:rotateX(0deg) rotateZ(0deg);
+}
+
+.stack {
+    display: block;
+    position: relative;
+}
+.contents {
+    font-size: 13.5px;
+    line-height: 1.25;
+}
+.stack .contents {
+    color: #fff;
+}
+.contents h2 {
+    color: #aff;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4.5px;
+}
+.contents span {
+    margin-right: 13.5px;
+}
+.card {
+    background-image: url("ressources/agence.jpg");
+    background-size: 200% 200%;
+    padding: 13.5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
